@@ -12,7 +12,7 @@
 
 	// contents of navigator.connection object
 	{
-  		"type": 3, // quick : "3"
+  		"type": 3, // quirk : "3"
   		"UNKNOWN": 0, // inherit in some browsers
   		"ETHERNET": 1, // inherit in some browsers
   		"WIFI": 2, // inherit in some browsers

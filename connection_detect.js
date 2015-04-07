@@ -1,14 +1,14 @@
 ;(function(factory){
 	// AMD && CMD
-    if(typeof define === 'function'){
-        define(factory)
+	if(typeof define === 'function'){
+		define(factory)
 	// CommonJS
 	}else if(typeof module === 'object' && module.exports){
 		module.exports = factory()
-    // Global
-    }else{
-        window.connection_detect = factory()
-    }
+	// Global
+	}else{
+		window.connection_detect = factory()
+	}
 })(function(){
 
 	var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection || navigator.msConnection || {'type':0,'unknown':0}
