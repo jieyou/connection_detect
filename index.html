@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+	<title>connection detect demo</title>
+	<style>
+		html,body{margin: 0;padding: 0;}
+	</style>
+</head>
+<body>
+	<button onclick="detect()">再次检测</button>
+	<div id="result"></div>
+
+	<!-- TEST global引入 && 平时开发时用这个调试 -->
+	<script src="connection_detect.js"></script>
+	<script>
+		var result = document.getElementById('result')
+		function detect(){
+			result.innerHTML += (connection_detect()+'<br>')
+		}
+		detect()
+	</script>
+
+	<!-- TEST seajs(CMD) 引入 -->
+	<!-- <script src="http://cdn.bootcss.com/seajs/2.3.0/sea.js"></script>
+	<script>
+		seajs.config({
+			base:'./'
+		})
+		seajs.use(['connection_detect'],function(connection_detect){
+			var result = document.getElementById('result')
+			function detect(){
+				result.innerHTML += (connection_detect()+'<br>')
+			}
+			detect()
+		})
+	</script> -->
+
+	<!-- TEST requirejs(AMD) 引入 -->
+	<!-- <script src="http://cdn.bootcss.com/require.js/2.1.15/require.min.js"></script>
+	<script>
+		require.config({
+			base:'./'
+		})
+		require(['connection_detect'],function(connection_detect){
+			var result = document.getElementById('result')
+			function detect(){
+				result.innerHTML += (connection_detect()+'<br>')
+			}
+			detect()
+		})
+	</script> -->
+</body>
+</html>
